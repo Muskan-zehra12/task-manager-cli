@@ -2,12 +2,12 @@ import sys
 
 tasks = []
 
-// this function adds a task to the task list created by muskan
+# this function adds a task to the task list created by muskan
 def add_task(task):
     tasks.append(task)
     print(f"Task added: {task}")
 
-// this function lists all tasks created by mukarram
+# this function lists all tasks created by mukarram
 def show_tasks():
     if not tasks:
         print("No tasks available.")
@@ -15,6 +15,13 @@ def show_tasks():
         for i, task in enumerate(tasks, 1):
             print(f"{i}. {task}")
 
+# this function delete all the task by Muskan
+def delete_task(index):
+    try:
+        removed = tasks.pop(index - 1)
+        print(f"Task deleted: {removed}")
+    except IndexError:
+        print("Invalid task number.")
 
 
 
